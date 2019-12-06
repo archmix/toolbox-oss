@@ -10,10 +10,11 @@
 	</parent>
 
 	<artifactId>walleed</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>The Simplest and Easiest Java Validation Library</name>
 
 	<scm>
 		<developerConnection>scm:git:ssh://git@github.com/archmix/${project.artifactId}.git</developerConnection>
+    <tag>v0.0.1</tag>
   </scm>
 </project>
