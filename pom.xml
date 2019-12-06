@@ -3,27 +3,17 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>tech.mrbraz</groupId>
+		<groupId>org.archmix</groupId>
 		<artifactId>java-parent</artifactId>
 		<version>1.8</version>
 		<relativePath />
 	</parent>
 
-	<groupId>walleed</groupId>
 	<artifactId>walleed</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>The Simplest and Easiest Java Validation Library</name>
 
 	<scm>
-		<developerConnection>scm:git:ssh://git@github.com/mrbraztech/${project.artifactId}.git</developerConnection>
-	  <tag>HEAD</tag>
+		<developerConnection>scm:git:ssh://git@github.com/archmix/${project.artifactId}.git</developerConnection>
   </scm>
-
-	<build>
-		<plugins>
-			<plugin>
-				<artifactId>maven-source-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 </project>
