@@ -20,6 +20,11 @@ public abstract class HashObject<SELF extends HashObject, Key> {
     return key.toString();
   }
 
+  public SELF set(Map<String, Object> values) {
+    this.values.putAll(values);
+    return (SELF) this;
+  }
+
   public Optional<Object> getObject(Key key) {
     return Optional.ofNullable(this.get(key));
   }
