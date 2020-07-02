@@ -11,9 +11,9 @@ Import dependency to your maven pom
 # Example of Walled API
 
 ``` java
-import walled.api.interfaces.CompositeValidation;
+import toolbox.validation.interfaces.CompositeValidation;
 
-import static walled.api.interfaces.ValueValidation.*;
+import static toolbox.validation.interfaces.ValueValidation.*;
 
 public void validate() {
   CompositeValidation.create().add(notEmpty(this.url).withMessage("Invalid database url"))

@@ -6,16 +6,29 @@
   <parent>
     <groupId>org.archmix</groupId>
     <artifactId>java-parent</artifactId>
-    <version>1.8</version>
+    <version>1.8.2</version>
     <relativePath/>
   </parent>
 
-  <artifactId>walleed</artifactId>
+  <artifactId>toolbox</artifactId>
   <version>0.0.2-SNAPSHOT</version>
 
-  <name>Walleed</name>
-  <description>The Simplest and Easiest Java Validation Library</description>
+  <name>Tool Box</name>
+  <description>Archmix Tool Box for Java Developers</description>
   <url>https://archmix.org</url>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+    </dependency>
+  </dependencies>
 
   <scm>
     <connection>scm:git:git://github.com/archmix/${project.artifactId}.git</connection>

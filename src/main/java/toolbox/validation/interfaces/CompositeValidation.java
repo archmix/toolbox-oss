@@ -1,4 +1,4 @@
-package walled.api.interfaces;
+package toolbox.validation.interfaces;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package walled.api.interfaces;
+package toolbox.validation.interfaces;
 
 import java.text.MessageFormat;
 import java.util.Optional;
