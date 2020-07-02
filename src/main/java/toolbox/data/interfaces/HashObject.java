@@ -1,15 +1,20 @@
 package toolbox.data.interfaces;
 
-import lombok.AccessLevel;
-import lombok.RequiredArgsConstructor;
-
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-@RequiredArgsConstructor(access = AccessLevel.PROTECTED)
-public abstract class HashObject<SELF extends HashObject, Key> {
-  private final Map<String, Object> values;
+public abstract class HashObject<SELF extends HashObject, Key> implements Serializable {
+  private Map<String, Object> values;
+
+  protected HashObject() {
+    this(new HashMap<>());
+  }
+
+  protected HashObject(Map<String, Object> values) {
+    this.values = values;
+  }
 
   public SELF set(Key key, Object value) {
     this.values.put(this.toString(key), value);

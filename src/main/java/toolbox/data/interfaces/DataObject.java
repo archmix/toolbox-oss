@@ -1,10 +1,12 @@
 package toolbox.data.interfaces;
 
-import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DataObject extends HashObject<DataObject, String> implements Serializable {
+public class DataObject extends HashObject<DataObject, String> {
+  protected DataObject() {
+    this(new HashMap<>());
+  }
 
   protected DataObject(Map<String, Object> values) {
     super(values);
@@ -15,6 +17,6 @@ public class DataObject extends HashObject<DataObject, String> implements Serial
   }
 
   public static DataObject create() {
-    return new DataObject(new HashMap<>());
+    return new DataObject();
   }
 }
