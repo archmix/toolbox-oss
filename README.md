@@ -1,14 +1,14 @@
-# How to use Walleed
+# How to use Toolbox
 
 Import dependency to your maven pom
 ```xml
 <dependency>
   <groupId>org.archmix</groupId>
-  <artifactId>walleed</artifactId>
-  <version>${walleedVersion}</version>
+  <artifactId>toolbox</artifactId>
+  <version>${toolboxVersion}</version>
 </dependency>
 ```
-# Example of Walled API
+# Example of Validation API
 
 ``` java
 import toolbox.validation.interfaces.CompositeValidation;
