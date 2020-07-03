@@ -10,7 +10,7 @@
   </parent>
 
   <artifactId>toolbox</artifactId>
-  <version>0.0.2</version>
+  <version>0.0.3-SNAPSHOT</version>
 
   <name>Tool Box</name>
   <description>Archmix Tool Box for Java Developers</description>
@@ -32,7 +32,7 @@
   <scm>
     <connection>scm:git:git://github.com/archmix/${project.artifactId}.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/archmix/${project.artifactId}.git</developerConnection>
-    <tag>v0.0.2</tag>
+    <tag>HEAD</tag>
     <url>https://github.com/archmix</url>
   </scm>
 
