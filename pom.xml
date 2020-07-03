@@ -9,25 +9,61 @@
     <relativePath />
   </parent>
 
-  <artifactId>toolbox</artifactId>
+  <artifactId>toolbox-oss</artifactId>
   <version>0.0.3-SNAPSHOT</version>
+  <packaging>pom</packaging>
 
-  <name>Tool Box</name>
+  <name>Tool Box OSS</name>
   <description>Archmix Tool Box for Java Developers</description>
   <url>https://archmix.org</url>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <scope>provided</scope>
-    </dependency>
+  <modules>
+    <module>toolbox-data</module>
+    <module>toolbox-java</module>
+    <module>toolbox-json</module>
+    <module>toolbox-validation</module>
+    <module>toolbox-yaml</module>
+  </modules>
 
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-    </dependency>
-  </dependencies>
+  <properties>
+    <jacksonVersion>2.11.1</jacksonVersion>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- JSON and Yaml -->
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>${jacksonVersion}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-jdk8</artifactId>
+        <version>${jacksonVersion}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>${jacksonVersion}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-annotations</artifactId>
+        <version>${jacksonVersion}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.dataformat</groupId>
+        <artifactId>jackson-dataformat-yaml</artifactId>
+        <version>${jacksonVersion}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-jsr310</artifactId>
+        <version>${jacksonVersion}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <scm>
     <connection>scm:git:git://github.com/archmix/${project.artifactId}.git</connection>
