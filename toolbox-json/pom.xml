@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.archmix</groupId>
     <artifactId>toolbox-oss</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4-SNAPSHOT</version>
   </parent>
 
   <artifactId>toolbox-json</artifactId>
@@ -49,7 +49,7 @@
   <scm>
     <connection>scm:git:git://github.com/archmix/${project.artifactId}.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/archmix/${project.artifactId}.git</developerConnection>
-    <tag>v0.0.3</tag>
+    <tag>HEAD</tag>
     <url>https://github.com/archmix</url>
   </scm>
 
