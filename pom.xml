@@ -26,11 +26,43 @@
   </modules>
 
   <properties>
+    <toolboxVersion>0.0.3-SNAPSHOT</toolboxVersion>
     <jacksonVersion>2.11.1</jacksonVersion>
   </properties>
 
   <dependencyManagement>
     <dependencies>
+      <!-- TOOLBOXES -->
+      <dependency>
+        <groupId>org.archmix</groupId>
+        <artifactId>toolbox-data</artifactId>
+        <version>${toolboxVersion}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.archmix</groupId>
+        <artifactId>toolbox-java</artifactId>
+        <version>${toolboxVersion}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.archmix</groupId>
+        <artifactId>toolbox-json</artifactId>
+        <version>${toolboxVersion}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.archmix</groupId>
+        <artifactId>toolbox-validation</artifactId>
+        <version>${toolboxVersion}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.archmix</groupId>
+        <artifactId>toolbox-yaml</artifactId>
+        <version>${toolboxVersion}</version>
+      </dependency>
+
       <!-- JSON and Yaml -->
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
