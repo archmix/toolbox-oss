@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
+@SuppressWarnings("unchecked")
 public abstract class HashObject<SELF extends HashObject, Key> implements Serializable {
   private Map<String, Object> values;
 
@@ -17,17 +18,35 @@ public abstract class HashObject<SELF extends HashObject, Key> implements Serial
   }
 
   public SELF set(Key key, Object value) {
-    this.values.put(this.toString(key), value);
+    this.values.put(key.toString(), value);
     return (SELF) this;
-  }
-
-  protected String toString(Key key) {
-    return key.toString();
   }
 
   public SELF set(Map<String, Object> values) {
-    this.values.putAll(values);
+    for (String key : values.keySet()) {
+      this.values.put(key, values.get(key));
+    }
     return (SELF) this;
+  }
+
+  public Optional<Object> popObject(Key key) {
+    return Optional.ofNullable(this.pop(key));
+  }
+
+  public Optional<Boolean> popBoolean(Key key) {
+    return Optional.ofNullable(this.pop(key));
+  }
+
+  public Optional<Number> popNumber(Key key) {
+    Optional<Number> value = this.getNumber(key);
+    this.values.remove(key.toString());
+    return value;
+  }
+
+  public Optional<String> popString(Key key) {
+    Optional<String> value = this.getString(key);
+    this.values.remove(key.toString());
+    return value;
   }
 
   public Optional<Object> getObject(Key key) {
@@ -46,7 +65,11 @@ public abstract class HashObject<SELF extends HashObject, Key> implements Serial
     }
 
     if (value instanceof String) {
-      return Optional.of(Integer.valueOf((String) value));
+      try {
+        return Optional.of(Double.valueOf((String) value));
+      } catch (Exception e){
+        return Optional.empty();
+      }
     }
 
     return Optional.of((Number) value);
@@ -79,8 +102,13 @@ public abstract class HashObject<SELF extends HashObject, Key> implements Serial
     return this.values.toString();
   }
 
-  @SuppressWarnings("unchecked")
   private <T> T get(Key key) {
-    return (T) this.values.get(this.toString(key));
+    return (T) this.values.get(key.toString());
+  }
+
+  private <T> T pop(Key key) {
+    T value = this.get(key);
+    this.values.remove(key.toString());
+    return value;
   }
 }
