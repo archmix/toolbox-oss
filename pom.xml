@@ -10,7 +10,7 @@
   </parent>
 
   <artifactId>toolbox-oss</artifactId>
-  <version>0.0.3-SNAPSHOT</version>
+  <version>0.0.4-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Tool Box OSS</name>
@@ -26,7 +26,7 @@
   </modules>
 
   <properties>
-    <toolboxVersion>0.0.3-SNAPSHOT</toolboxVersion>
+    <toolboxVersion>0.0.4-SNAPSHOT</toolboxVersion>
     <jacksonVersion>2.11.1</jacksonVersion>
   </properties>
 
