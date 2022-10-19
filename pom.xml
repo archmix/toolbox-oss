@@ -27,7 +27,7 @@
 
   <properties>
     <toolboxVersion>0.0.5-SNAPSHOT</toolboxVersion>
-    <jacksonVersion>2.11.1</jacksonVersion>
+    <jacksonVersion>2.13.4.1</jacksonVersion>
   </properties>
 
   <dependencyManagement>
