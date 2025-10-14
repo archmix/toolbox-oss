@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.archmix</groupId>
     <artifactId>java-parent</artifactId>
-    <version>1.11.0</version>
+    <version>1.11.1</version>
     <relativePath />
   </parent>
 
@@ -27,7 +27,7 @@
 
   <properties>
     <toolboxVersion>0.0.6-SNAPSHOT</toolboxVersion>
-    <jacksonVersion>2.17.0</jacksonVersion>
+    <jacksonVersion>2.19.2</jacksonVersion>
   </properties>
 
   <dependencyManagement>
@@ -70,11 +70,6 @@
         <version>${jacksonVersion}</version>
       </dependency>
       <dependency>
-        <groupId>com.fasterxml.jackson.datatype</groupId>
-        <artifactId>jackson-datatype-jdk8</artifactId>
-        <version>${jacksonVersion}</version>
-      </dependency>
-      <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-core</artifactId>
         <version>${jacksonVersion}</version>
@@ -85,8 +80,8 @@
         <version>${jacksonVersion}</version>
       </dependency>
       <dependency>
-        <groupId>com.fasterxml.jackson.dataformat</groupId>
-        <artifactId>jackson-dataformat-yaml</artifactId>
+        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-jdk8</artifactId>
         <version>${jacksonVersion}</version>
       </dependency>
       <dependency>
@@ -94,34 +89,11 @@
         <artifactId>jackson-datatype-jsr310</artifactId>
         <version>${jacksonVersion}</version>
       </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.dataformat</groupId>
+        <artifactId>jackson-dataformat-yaml</artifactId>
+        <version>${jacksonVersion}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
-
-  <scm>
-    <connection>scm:git:git://github.com/archmix/${project.artifactId}.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/archmix/${project.artifactId}.git</developerConnection>
-    <tag>HEAD</tag>
-    <url>https://github.com/archmix</url>
-  </scm>
-
-  <licenses>
-    <license>
-      <name>The Apache Software License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
-
-  <issueManagement>
-    <system>Github issue tracker</system>
-    <url>https://github.com/archmix/${project.artifactId}/issues</url>
-  </issueManagement>
-
-  <developers>
-    <developer>
-      <id>mrbraz</id>
-      <name>Anderson Braz</name>
-      <email>mrbraz@archmix.org</email>
-    </developer>
-  </developers>
 </project>
