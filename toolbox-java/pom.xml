@@ -9,6 +9,7 @@
   </parent>
 
   <artifactId>toolbox-java</artifactId>
+  <name>Tool Box Java</name>
 
   <dependencies>
     <dependency>

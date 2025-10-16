@@ -9,6 +9,7 @@
   </parent>
 
   <artifactId>toolbox-validation</artifactId>
+  <name>Tool Box Validation</name>
 
   <dependencies>
     <dependency>

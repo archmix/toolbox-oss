@@ -9,6 +9,7 @@
   </parent>
 
   <artifactId>toolbox-data</artifactId>
+  <name>Tool Box Data</name>
 
   <dependencies>
     <dependency>

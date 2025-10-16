@@ -9,6 +9,7 @@
   </parent>
 
   <artifactId>toolbox-json</artifactId>
+  <name>Tool Box Json</name>
 
   <dependencies>
     <dependency>
